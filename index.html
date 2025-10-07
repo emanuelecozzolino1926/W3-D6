@@ -212,8 +212,39 @@
        La tabella avrà 5 elementi e questa struttura: immagine, nome prodotto, quantità, prezzo
     */
 
-      const generateTable = function () {};
+      const generateTable = function () {
+        let tableArea = document.getElementById("tableArea");
+        tableArea.innerHTML = `
+        <table>
+            <tr>
+              <th>Immagine</th>
+              <th>Nome prodotto</th>
+              <th>Quantità</th>
+              <th>Prezzo</th>
+            </tr>
+            <tr>
+              <td>Img</td>
+              <td>Nome Prodotto</td>
+              <td>1</td>
+              <td>200</td>
+            </tr>
+            <tr>
+              <td>Img 2</td>
+              <td>Nome Prodotto 2</td>
+              <td>1</td>
+              <td>200</td>
+            </tr>
+             <tr>
+              <td>Img 3</td>
+              <td>Nome Prodotto 3</td>
+              <td>1</td>
+              <td>200</td>
+            </tr>           
+      </table>
+        `;
+      };
 
+      generateTable();
       /* ESERCIZIO 12
        Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
     */
