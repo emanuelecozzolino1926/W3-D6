@@ -93,7 +93,11 @@
        Scrivi una funzione per aggiungere al titolo della pagina una classe "myHeading"
     */
 
-      const addClassToTitle = function () {};
+      const addClassToTitle = function () {
+        let newTitle = document.getElementsByTagName("title")[0];
+        newTitle.classList.add("myHeading");
+      };
+      addClassToTitle();
 
       /* ESERCIZIO 3
        Scrivi una funzione che cambi il testo dei p figli di un div
