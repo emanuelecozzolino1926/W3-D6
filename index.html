@@ -221,13 +221,7 @@
               <th>Nome prodotto</th>
               <th>Quantità</th>
               <th>Prezzo</th>
-            </tr>
-            <tr>
-              <td>Img</td>
-              <td>Nome Prodotto</td>
-              <td>1</td>
-              <td>200</td>
-            </tr>           
+            </tr>       
       </table>
         `;
       };
@@ -237,24 +231,39 @@
        Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
     */
 
-      const addRow = function () {
+      const addRow = function (img, name, qty, price) {
+        // seleziono la tabella già creata nell'esercizio 11
         let addElementTable = document.querySelector("table");
+
+        // aggiungo UNA riga con i dati ricevuti come parametri
         addElementTable.innerHTML += `            
         <tr>
-          <td>Img 1</td>
-          <td>Nome Prodotto</td>
-          <td>1</td>
-          <td>200</td>
-        </tr>
-        <tr>
-          <td>Img</td>
-          <td>Nome Prodotto</td>
-          <td>1</td>
-          <td>200</td>
+          <td><img src="${img}" width="70"></td>
+          <td>${name}</td>
+          <td>${qty}</td>
+          <td>${price}</td>
         </tr>`;
       };
 
-      addRow();
+      addRow(
+        "https://fastly.picsum.photos/id/0/5000/3333.jpg?hmac=_j6ghY5fCfSD6tvtcV74zXivkJSPIfR9B8w34XeQmvU",
+        "Prodotto",
+        5,
+        "2"
+      );
+
+      addRow(
+        "https://fastly.picsum.photos/id/12/2500/1667.jpg?hmac=Pe3284luVre9ZqNzv1jMFpLihFI6lwq7TPgMSsNXw2w",
+        "Prodotto2",
+        9,
+        "15"
+      );
+      addRow(
+        "https://fastly.picsum.photos/id/26/4209/2769.jpg?hmac=vcInmowFvPCyKGtV7Vfh7zWcA_Z0kStrPDW3ppP0iGI",
+        "Prodott 3",
+        21,
+        "20"
+      );
 
       /* ESERCIZIO 14
       Crea una funzione che nasconda le immagini della tabella quando eseguita
