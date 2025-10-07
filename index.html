@@ -227,18 +227,6 @@
               <td>Nome Prodotto</td>
               <td>1</td>
               <td>200</td>
-            </tr>
-            <tr>
-              <td>Img 2</td>
-              <td>Nome Prodotto 2</td>
-              <td>1</td>
-              <td>200</td>
-            </tr>
-             <tr>
-              <td>Img 3</td>
-              <td>Nome Prodotto 3</td>
-              <td>1</td>
-              <td>200</td>
             </tr>           
       </table>
         `;
@@ -249,7 +237,24 @@
        Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
     */
 
-      const addRow = function () {};
+      const addRow = function () {
+        let addElementTable = document.querySelector("table");
+        addElementTable.innerHTML += `            
+        <tr>
+          <td>Img 1</td>
+          <td>Nome Prodotto</td>
+          <td>1</td>
+          <td>200</td>
+        </tr>
+        <tr>
+          <td>Img</td>
+          <td>Nome Prodotto</td>
+          <td>1</td>
+          <td>200</td>
+        </tr>`;
+      };
+
+      addRow();
 
       /* ESERCIZIO 14
       Crea una funzione che nasconda le immagini della tabella quando eseguita
