@@ -232,10 +232,8 @@
     */
 
       const addRow = function (img, name, qty, price) {
-        // seleziono la tabella già creata nell'esercizio 11
         let addElementTable = document.querySelector("table");
 
-        // aggiungo UNA riga con i dati ricevuti come parametri
         addElementTable.innerHTML += `            
         <tr>
           <td><img src="${img}" width="70"></td>
@@ -269,7 +267,15 @@
       Crea una funzione che nasconda le immagini della tabella quando eseguita
     */
 
-      const hideAllImages = function () {};
+      const hideAllImages = function () {
+        let hideImage = document.querySelectorAll("table img");
+
+        hideImage.forEach((img) => {
+          img.style.display = "none";
+        });
+      };
+
+      hideAllImages();
 
       /* EXTRA ESERCIZIO 15
       Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
