@@ -179,7 +179,18 @@
        Scrivi una funzione che rimuova l'ultima lettera dall'h1 ogni volta che l'utente lo clicca
       */
 
-      const makeItClickable = function () {};
+      const makeItClickable = function () {
+        let removeH1Letter = document.querySelectorAll("h1");
+        removeH1Letter.forEach((h1) => {
+          h1.addEventListener("click", (e) => {
+            let firstCut = e.target.innerText;
+            let finalCut = firstCut.slice(0, -1);
+            e.target.innerText = finalCut;
+          });
+        });
+      };
+
+      makeItClickable();
 
       /* ESERCIZIO 10
        Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
